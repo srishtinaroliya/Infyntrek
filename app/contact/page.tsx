@@ -9,7 +9,7 @@ import ScheduleMeetingModal from "../../components/ui/ScheduleMeetingModal";
 export default function ContactPage() {
   const [faqOpen, setFaqOpen] = useState([true, false, false, false]);
 
-  const toggleFaq = (idx) => {
+  const toggleFaq = (idx: number) => {
     setFaqOpen((s) => s.map((v, i) => (i === idx ? !v : v)));
   };
 
