@@ -165,7 +165,7 @@ export default function HomePage() {
 
 
   {/* Everything inside your Card */}
-  <div className="relative rounded-2xl overflow-hidden border border-white/6 shadow-2xl p-10 md:p-14">
+  <div className="relative rounded-2xl overflow-hidden border border-white/6 shadow-2xl p-6 sm:p-8 md:p-14">
 
     {/* CONTENT */}
     <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -198,7 +198,7 @@ export default function HomePage() {
     </div>
 
     {/* STATS */}
-    <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 px-2">
       <StatCard label="Years of Experience" value="10+" />
       <StatCard label="Team Members" value="150+" />
       <StatCard label="Annual Turnover" value="$20M+" />
@@ -238,9 +238,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex justify-center">
-              <Idea />
-          </div>
+         <div className="flex justify-center">
+            <div className="w-52 sm:w-64 md:w-72">
+                <Idea />
+            </div>
+        </div>
+
         </div>
       </section>
  
@@ -252,7 +255,7 @@ export default function HomePage() {
     From startup to industry leader - collaborating with Amazon & AMEX to deliver cutting-edge fintech solutions and training
   </p>
 
-  <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
     <TimelineCard
       year="2019"
       title="Foundation"
@@ -292,10 +295,11 @@ export default function HomePage() {
           <h3 className="text-2xl font-bold">We're Hiring. Exponentially.</h3>
             
             <Category />
-            <div className="flex items-start gap-28">
+            <div className="flex flex-col md:flex-row items-start gap-8 md:gap-28">
 
   {/* LEFT — Cartoon */}
-  <div className="w-[180px] flex-shrink-0">
+  <div className="w-[130px] sm:w-[150px] md:w-[180px] flex-shrink-0 mx-auto md:mx-0">
+
     <Cartoon />
   </div>
 
@@ -342,13 +346,13 @@ export default function HomePage() {
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: false, amount: 0.5 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="text-6xl md:text-8xl font-extrabold leading-tight"
+     className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight"
     >
       <span className="block text-white ml-10">FRESHER</span>
       <span className="block text-white ml-20 mt-2">SPOT<span className="text-blue-300">LIGHT</span></span>
     </motion.h2>
 
-    <div className="flex flex-col gap-4 mt-16 md:mt-0 relative z-10">
+    <div className="flex flex-col gap-4 mt-10 md:mt-0 w-full max-w-md">
       {[
         "Real-world skills from domain experts",
         "Work on live fintech projects",
@@ -391,13 +395,14 @@ export default function HomePage() {
 
 <section className="py-5">
   <div className="max-w-6xl mx-auto text-center">
-    <h1 className="text-6xl font-bold">WHY JOIN US</h1>
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+        WHY JOIN US</h1>
      <h3 className="py-1">Start your journey with a company that values innovation and growth</h3>
     {/* Overlapping Boxes */}
-    <div className="relative mt-20">
+    <div className="relative mt-14 sm:mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6
                       max-w-5xl mx-auto
-                      -mb-20 z-20 relative">
+                      mb-20 z-20 relative">
         
         {/* Box 1 */}
         <div className="p-6 rounded-2xl bg-white/50 backdrop-blur-md border border-white/20 text-white shadow-lg">
@@ -433,7 +438,8 @@ export default function HomePage() {
     
     {/* Left Column */}
     <div className="flex-1 text-center md:text-left">
-      <h2 className="text-6xl md:text-6xl font-bold text-white">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+
         Work on Meaningful Projects
       </h2>
       <p className="mt-4 text-white/80 md:text-lg">
