@@ -48,22 +48,23 @@ export default function AboutPage() {
     
       {/* ===================== HERO ===================== */}
       <section
-  className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] bg-cover bg-center flex items-center justify-center px-6"
-  style={{ backgroundImage: "url('/home/img5.png')" }}
->
+        className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] 
+        bg-cover bg-center flex items-center justify-center px-4 sm:px-6"
+        style={{ backgroundImage: "url('/home/img5.png')" }}
+      >
         <div className="container mx-auto px-6 md:px-12 text-center">
              
              
-          <h1 className="text-4xl text-gray-900 md:text-6xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 font-bold leading-tight">
             Pioneering the Future of Finance
           </h1>
 
-          <p className="max-w-2xl mx-auto mt-4 text-black">
+          <p className="max-w-xl mx-auto mt-3 text-black text-sm sm:text-base md:text-lg">
             Discover Infyntrek Systemes’ journey from a traditional finance firm
             to a global leader in fintech innovation.
           </p>
 
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <Button
       href="/JoinOurTeam"
       variant="solid"
@@ -83,7 +84,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===================== FINTECH TRANSFORMATION ===================== */}
-      <section className="py-24 container mx-auto px-6 md:px-12">
+      <section className="py-16 sm:py-24 container mx-auto px-4 sm:px-6 md:px-12">
         <h2 className="text-3xl font-bold">
           From Finance Firm to Fintech Powerhouse
         </h2>
@@ -95,7 +96,7 @@ export default function AboutPage() {
           landscape.
         </p>
          
-          <div className="grid md:grid-cols-2 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
       {/* Our Mission - from left */}
       <motion.div
         className="bg-[#141a22] p-6 rounded-xl border border-gray-700"
@@ -144,7 +145,7 @@ export default function AboutPage() {
           <div className="space-y-16">
             {/* TIMELINE ITEM */}
             <div className="flex items-center justify-between">
-              <div className="w-5/12 text-right">
+              <div className="w-full md:w-5/12 text-right md:text-right text-center">
                 <h4 className="font-semibold">2014: Company Founding</h4>
                 <p className="text-gray-400 text-sm">
                   Infyntrek Systemes is established to modernize financial services.
@@ -215,7 +216,7 @@ export default function AboutPage() {
       <section className="py-24 container mx-auto px-6 md:px-12 text-center">
         <h2 className="text-3xl font-bold">Meet Our Leadership</h2>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-14">
 
           {/* Leader */}
           {[
@@ -242,13 +243,14 @@ export default function AboutPage() {
             },
           ].map((leader) => (
             <div key={leader.name} className="flex flex-col items-center">
-              <Image
+             <Image
                 src={leader.img}
-                width={120}
-                height={120}
+                width={160}
+                height={160}
                 alt="Leader"
-                className="rounded-full object-cover"
+                className="rounded-full object-cover w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36"
               />
+
 
               <h3 className="mt-4 font-semibold">{leader.name}</h3>
               <p className="text-blue-400 text-sm">{leader.role}</p>
@@ -262,7 +264,7 @@ export default function AboutPage() {
       <section className="py-24 bg-[#0b0f15] text-center">
         <h2 className="text-3xl font-bold">Our Core Values</h2>
 
-        <div className="grid md:grid-cols-4 gap-8 mt-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-12 max-w-5xl mx-auto">
           {[
             {
               title: "Trust & Security",
@@ -294,7 +296,7 @@ export default function AboutPage() {
       </section>
 
       {/* ===================== FINAL CTA ===================== */}
-      <section className="py-24 text-center">
+      <section className="py-16 sm:py-24 text-center px-4">
         <h2 className="text-3xl font-bold">
           Join Us in Shaping the Future of Finance
         </h2>
@@ -304,7 +306,8 @@ export default function AboutPage() {
           Let’s build the future together.
         </p>
 
-        <div className="flex justify-center mt-8 gap-4">
+        <div className="flex flex-col sm:flex-row justify-center mt-8 gap-4">
+
                 <Button
       href="/career"
       variant="solid"
